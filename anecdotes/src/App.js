@@ -1,10 +1,10 @@
 import { useState } from "react";
-
-const Button = ({ handleClick, text }) => (
+const Button = ({ handleClick, text }) => 
+(
   <button onClick={handleClick}>{text}</button>
 );
-
-const App = () => {
+const App = () => 
+{
   const anecdotes = [
     "If it hurts, do it more often",
     "Adding manpower to a late software project makes it later!",
@@ -14,20 +14,17 @@ const App = () => {
     "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
     "Programming without an extremely heavy use of console.log is same as if a doctor would refuse to use x-rays or blood tests when diagnosing patients",
   ];
-
   const [selected, setSelected] = useState(0);
-
   const [points, setPoints] = useState(new Array(anecdotes.length).fill(0));
-
-  const addVote = () => {
+  const addVote = () => 
+  {
     const pointsCopy = [...points];
     pointsCopy[selected] += 1;
     setPoints(pointsCopy);
   };
-
   const bestAnecdoteIndex = points.indexOf(Math.max(...points));
-
-  return (
+  return 
+  (
     <div>
       <h1>Anecdote of the day</h1>
       <div>{anecdotes[selected]}</div>
@@ -45,5 +42,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
