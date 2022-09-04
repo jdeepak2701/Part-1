@@ -1,16 +1,18 @@
-const Header = (header) => {
+const Header = (header) => 
+{
   return <h1>{header.course}</h1>;
 };
-
-const Part = (content) => {
-  return (
+const Part = (content) => 
+{
+  return 
+  (
     <p>
       {content.part} {content.exercise}
     </p>
   );
 };
-
-const Content = (content) => {
+const Content = (content) => 
+{
   return (
     <div>
       <Part
@@ -28,20 +30,21 @@ const Content = (content) => {
     </div>
   );
 };
-
-const Total = (total) => {
+const Total = (total) => 
+{
   return (
     <p>
       Number of exercises{" "}
       {total.parts[0].exercises +
-        total.parts[1].exercises +
-        total.parts[2].exercises}
+       total.parts[1].exercises +
+       total.parts[2].exercises}
     </p>
   );
 };
-
-const App = () => {
-  const course = {
+const App = () => 
+{
+  const course = 
+        {
     name: "Half Stack application development",
     parts: [
       {
@@ -58,8 +61,8 @@ const App = () => {
       },
     ],
   };
-
-  return (
+  return 
+  (
     <div>
       <Header course={course.name} />
       <Content parts={course.parts} />
